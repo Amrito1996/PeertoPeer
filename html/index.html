@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Peer Review</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img_545303.ico">
+        <link rel="shortcut-icon" href="img_545303.ico">
+        <link rel="stylesheet" href="../css/style1.css" type = "text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body background="giphy-downsized-large.gif">
+        <style>
+            .warning {
+                background: red;
+            }
+            .checked, .hovered {
+                color: orange;
+            }
+        </style>
+        <h2 id="AWA">Analytical Writing Analysis</h2>
+        <main>
+            <h4 id="ques">The issue needs to be analyzed</h4>
+            <div class="output" style="min-height: 75px;"><textarea id="Q" disabled style="resize: none;min-height: 100px; width: 100%">A recent study shows that people living on the continent of North America suffer 9 times more chronic fatigue and 31 times more chronic depression than do people living on the continent of Asia. Interestingly, Asians, on average, eat 20 grams of soy per day, whereas north Americans eat virtually none. It turns out that soy contains phytochemicals called Isoflavones, which have been found to possess disease-preventing properties. Thus, North Americans should consider eating soy on a regular basis as a way of preventing fatigue and depression.</textarea></div>
+
+            <h2 id="a">Write your response here</h2>
+            <div class="dropdown">
+                <select class="dropbtn warning" style="margin: 10px 0;">
+                    <option value="" disabled selected>Please select you are</option>
+                    <option value="Amrita Singha Roy">Amrita</option>
+                    <option value="Pragyan Bhattacharya">Pragyan</option>
+                </select>    
+            </div>
+            <div id="rating" style="float:right;margin-top:10px">
+                <span class="fa fa-2x fa-star"></span>
+                <span class="fa fa-2x fa-star"></span>
+                <span class="fa fa-2x fa-star"></span>
+                <span class="fa fa-2x fa-star"></span>
+                <span class="fa fa-2x fa-star"></span>
+                <span class="fa fa-2x fa-star"></span>    
+            </div>
+            <form>
+                <textarea id="code" disabled="disabled" class="input" style="min-height: 100px; width: 100%"></textarea>
+
+                <div class="playable-buttons">
+                    <button id="reset" type="button">Reset</button>
+                    <button id="Submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+        <script>
+        !function(){
+            document.querySelector(".dropbtn").addEventListener("change", function(){
+                console.log(this.value);
+                this.className = this.className.replace(" warning", "");
+                this.disabled = true;
+                const time = document.querySelector("#code");
+                time.disabled = false;
+                window.setTimeout(function(){
+                    time.disabled = true;
+                }, 1800000);
+            });
+            const stars = document.querySelectorAll("#rating > span");
+            stars.forEach(function(item, n){
+                item.addEventListener("mouseover", function(e){
+                    if (! this.className.includes("hovered"))
+                        this.classList.add("hovered");
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+                item.addEventListener("mouseout", function(e){
+                    if (this.className.includes("hovered"))
+                        this.classList.remove("hovered");
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+                item.addEventListener("click", function(e){
+                    for (let i = 0; i <= n; i++) {
+                        stars[i].classList.add("checked");
+                    }
+                    for (let i = n + 1 ; i < stars.length; i++) {
+                        stars[i].classList.remove("checked");
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            });
+        }()
+        </script>
+    </body>
+</html>

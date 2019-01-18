@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+html, body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#AWA {
+    text-align: center;
+    background-color: #880e4f!important;
+    top: 0;
+    margin: 0;
+    padding: 25px 0;
+    color: whitesmoke;
+    opacity: 0.9;
+    font-family: Lobster;
+    font-stretch: expanded;
+    font-size: 3.25em;
+}
+
+main {
+    background: rgba(255,255,255,0.9);
+    width: 50%;
+    margin-left: 20%;
+    padding: 10px 5%;
+    border: rgba(0,0,0,0.2);
+    box-shadow: 3px 3px red, -1em 0 .4em olive;
+    margin-top: 30px;
+}
+
+#ques{
+    outline-color: black;
+    background-color: slategray;
+    text-align: center;
+    padding: 5px 0;
+    color: white;
+    opacity: 0.7;
+}
+
+#Q{
+    background-color: white;
+    border:1px solid blue;
+    text-align: justify;
+    opacity: 0.9;
+    padding: 5px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #239dce;
+}
+
+#reset{
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    text-align: left;
+}
+
+#Submit{
+    background-color: #239dce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+}
+
+#a{
+    margin-left: 25%;
+    background-color: slategray;
+    text-align: center;
+    width: 50%;
+    padding: 5px 0;
+    color: aliceblue;
+    opacity: 0.7;
+}
+
+.playable-buttons{
+    text-align: center;
+    opacity: 0.9;
+}
+#code{
+    opacity: 0.95;
+}
